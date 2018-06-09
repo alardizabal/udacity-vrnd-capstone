@@ -9,14 +9,15 @@ public class LaunchLavaBomb : MonoBehaviour
 
     void Start()
     {
-        LaunchBomb();
+        InvokeRepeating("LaunchBomb", 2.0f, 3.0f);
     }
 
     public void LaunchBomb()
     {
+        transform.rotation = Quaternion.Euler(0, 0, 0);
         Rigidbody lavaBombRigidbody = Instantiate(lavaBomb.GetComponent<Rigidbody>(), transform.position, transform.rotation) as Rigidbody;
         ;
-        lavaBombRigidbody.AddForce(transform.forward * 800);
+        lavaBombRigidbody.AddForce(transform.forward * Random.Range(1200,1900));
         GetComponent<AudioSource>().Play();
     }
 }

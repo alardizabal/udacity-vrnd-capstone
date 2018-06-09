@@ -10,8 +10,6 @@ public class HandInteraction : MonoBehaviour
     private bool isRightController;
     public float throwForce = 1.5f;
 
-    public BallReset ballManager;
-
     // Swipe
     public float swipeSum;
     public bool isTouchpadActive;
