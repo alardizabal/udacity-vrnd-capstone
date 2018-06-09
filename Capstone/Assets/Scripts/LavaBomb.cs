@@ -15,12 +15,10 @@ public class LavaBomb : MonoBehaviour
     {
         if (collision.collider.CompareTag("Ground"))
         {
-            //Rigidbody ballRigidBody = lavaBomb.GetComponent<Rigidbody>();
-            //ballRigidBody.velocity = Vector3.zero;
-            //ballRigidBody.angularVelocity = Vector3.zero;
             lavaBomb.SetActive(false);
             Logger.Log("Hit the ground");
         }
+        
     }
 
     void OnTriggerEnter(Collider collider)
