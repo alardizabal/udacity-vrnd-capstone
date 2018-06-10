@@ -15,10 +15,9 @@ public class LavaBomb : MonoBehaviour
     {
         if (collision.collider.CompareTag("Ground"))
         {
-            lavaBomb.SetActive(false);
             Logger.Log("Hit the ground");
         }
-        
+        lavaBomb.SetActive(false);
     }
 
     void OnTriggerEnter(Collider collider)
