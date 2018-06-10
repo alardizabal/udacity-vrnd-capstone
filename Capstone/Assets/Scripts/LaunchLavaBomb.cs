@@ -14,6 +14,7 @@ public class LaunchLavaBomb : MonoBehaviour
     {
         current = this;
     }
+
     void Start()
     {
         pooledBombs = new List<GameObject>();

@@ -26,7 +26,7 @@ public class Flocking : MonoBehaviour
 
     public float line_length = 4.0f;
 
-    private const int _COUNT = 100;
+    private const int _COUNT = 20;
     private GameObject[] _flock = new GameObject[_COUNT];
     private GameObject[] _flock_last_frame = new GameObject[_COUNT];
     private GameObject _selection = null;
@@ -65,7 +65,7 @@ public class Flocking : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         //for each cube check its neighborhood and update it's position based on the last frame
         _flock_last_frame = _flock;

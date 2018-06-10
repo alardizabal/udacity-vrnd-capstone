@@ -6,11 +6,7 @@ using UnityEngine.SceneManagement;
 public class LavaBomb : MonoBehaviour
 {
     public GameObject lavaBomb;
-
-    void Start()
-    {
-    }
-
+    
     void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Ground"))
