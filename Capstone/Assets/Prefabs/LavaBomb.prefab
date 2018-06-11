@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114314318903695834}
   m_Layer: 0
   m_Name: LavaBomb
-  m_TagString: Untagged
+  m_TagString: LavaBomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -549,7 +549,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
+  Spatialize: 1
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1

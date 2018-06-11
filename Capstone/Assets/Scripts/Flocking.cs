@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Flocking : MonoBehaviour
 {
+
     public GameObject flyingPrefab;
 
     public float radius = 8.0f;
@@ -31,9 +32,9 @@ public class Flocking : MonoBehaviour
     private GameObject[] _flock_last_frame = new GameObject[_COUNT];
     private GameObject _selection = null;
 
-    private Color _selection_color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
-    private Color _default_color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
-    private Color _neighborhood_color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+    //private Color _selection_color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
+    //private Color _default_color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
+    //private Color _neighborhood_color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 
 
     private Color _direction_line_color = new Color(0.5f, 0.5f, 1.0f, 0.45f);
@@ -52,7 +53,7 @@ public class Flocking : MonoBehaviour
             _flock[i].transform.localRotation = Random.rotation;
             _flock[i].transform.parent = gameObject.transform;
             _flock[i].name = "Flock " + i;
-            _flock[i].GetComponent<MeshRenderer>().material.color = _default_color;
+            //_flock[i].GetComponent<MeshRenderer>().material.color = _default_color;
             Destroy(_flock[i].GetComponent<BoxCollider>());
         }
 
@@ -65,7 +66,7 @@ public class Flocking : MonoBehaviour
     }
 
 
-    void FixedUpdate()
+    void Update()
     {
         //for each cube check its neighborhood and update it's position based on the last frame
         _flock_last_frame = _flock;
@@ -175,9 +176,9 @@ public class Flocking : MonoBehaviour
 
     void SetColor(GameObject game_object)
     {
-        bool in_range_of_selection = Vector3.Distance(_selection.transform.position, game_object.transform.position) < radius;
+        //bool in_range_of_selection = Vector3.Distance(_selection.transform.position, game_object.transform.position) < radius;
 
-        game_object.GetComponent<MeshRenderer>().material.color = in_range_of_selection ? game_object == _selection ? _selection_color : _neighborhood_color : _default_color;
+        //game_object.GetComponent<MeshRenderer>().material.color = in_range_of_selection ? game_object == _selection ? _selection_color : _neighborhood_color : _default_color;
     }
 
 

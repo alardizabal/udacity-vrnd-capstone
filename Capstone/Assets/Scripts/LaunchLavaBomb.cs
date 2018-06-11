@@ -24,7 +24,16 @@ public class LaunchLavaBomb : MonoBehaviour
             obj.SetActive(false);
             pooledBombs.Add(obj);
         }
+    }
+
+    public void StartLavaBombLauncher()
+    {
         InvokeRepeating("LaunchBomb", 4.0f, 3.0f);
+    }
+
+    public void StopLavaBombLauncher()
+    {
+        CancelInvoke();
     }
 
     public GameObject GetPooledBomb()
@@ -34,19 +43,18 @@ public class LaunchLavaBomb : MonoBehaviour
         {
             bombPoolNum = 0;
         }
-        Logger.Log(bombPoolNum);
         return pooledBombs[bombPoolNum];
     }
 
     public void LaunchBomb()
     {
-        transform.rotation = transform.rotation * Quaternion.Euler(Random.Range(-7, 7), Random.Range(0, 5), 0);
+        transform.rotation = transform.rotation * Quaternion.Euler(0, 0, Random.Range(-5, 5));
         GameObject bomb = LaunchLavaBomb.current.GetPooledBomb();
         bomb.SetActive(true);
         Rigidbody lavaBombRigidbody = bomb.GetComponent<Rigidbody>();
         lavaBombRigidbody.position = transform.position;
         lavaBombRigidbody.rotation = transform.rotation;
-        lavaBombRigidbody.AddForce(transform.forward * Random.Range(1200, 2000));
+        lavaBombRigidbody.AddForce(transform.forward * Random.Range(1300, 1900));
         GetComponent<AudioSource>().Play();
     }
 }

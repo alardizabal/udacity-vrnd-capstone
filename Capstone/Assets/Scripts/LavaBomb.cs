@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LavaBomb : MonoBehaviour
 {
     public GameObject lavaBomb;
-    
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Ground"))
@@ -14,14 +14,5 @@ public class LavaBomb : MonoBehaviour
             Logger.Log("Hit the ground");
         }
         lavaBomb.SetActive(false);
-    }
-
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.CompareTag("Player"))
-        {
-            GameObject playerObject = collider.gameObject;
-            Logger.Log("Hit the player");
-        }
     }
 }
