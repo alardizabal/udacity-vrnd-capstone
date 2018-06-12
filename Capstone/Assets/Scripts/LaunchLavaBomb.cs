@@ -6,7 +6,7 @@ public class LaunchLavaBomb : MonoBehaviour
 {
     public static LaunchLavaBomb current;
     public GameObject pooledLavaBomb;
-    public int bombAmount = 10;
+    public int bombAmount = 4;
     public List<GameObject> pooledBombs;
     public static int bombPoolNum = 0;
 

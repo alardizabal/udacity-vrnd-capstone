@@ -11,22 +11,42 @@ public class GameStateManager : MonoBehaviour
     public AudioSource youWinAudio;
     public AudioSource youLostAudio;
     private bool isPlaying = false;
-    private float timeLeft = 10.0f;
-
-    void Start()
-    {
-        //introAudio.Play();
-    }
-
-    void Update()
+    private bool hasPlayedIntro = false;
+    private bool hasPlayedYouLostAudio = false;
+    private float introDelay = 10.0f;
+    private float restartDelay = 10.0f;
+    private bool didLose = false;
+    
+    void FixedUpdate()
     {
         if (!isPlaying)
         {
-            timeLeft -= Time.deltaTime;
-            if (timeLeft < 0)
+            introDelay -= Time.deltaTime;
+            if (introDelay < 8.0f && !hasPlayedIntro)
+            {
+                introAudio.Play();
+                hasPlayedIntro = true;
+            }
+            if (introDelay < 0)
             {
                 isPlaying = true;
                 StartPlaying();
+            }
+        }
+        else
+        {
+            if (didLose)
+            {
+                restartDelay -= Time.deltaTime;
+                if (restartDelay < 6.0f && !hasPlayedYouLostAudio)
+                {
+                    youLostAudio.Play();
+                    hasPlayedYouLostAudio = true;
+                }
+                if (restartDelay < 0)
+                {
+                    SteamVR_LoadLevel.Begin("Level 1");
+                }
             }
         }
     }
@@ -51,7 +71,7 @@ public class GameStateManager : MonoBehaviour
         Logger.Log("Player Lost");
         launcher.StopLavaBombLauncher();
         SunRotate.shouldRotate = false;
-        //youLostAudio.Play();
+        didLose = true;
     }
 
 }

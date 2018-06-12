@@ -5,7 +5,7 @@ using UnityEngine;
 public class Logger : MonoBehaviour
 {
 
-    public static bool isDebugging = true;
+    public static bool isDebugging = false;
 
     public static void Log(string message)
     {
