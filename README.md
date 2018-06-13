@@ -5,7 +5,7 @@
  
  ## Highlights
  
- Run 'build.exe' - Tested on an HTC Vive
+ Run 'build.exe' in the Capstone folder - Tested on an HTC Vive
  
  Video - https://youtu.be/xPksw9rp3Bw
  
