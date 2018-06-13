@@ -1,5 +1,6 @@
 # Volcano VR
- Udacity VR Developer Nanodegree Term 3 - Capstone
+ ## Udacity VR Developer Nanodegree Term 3 - Capstone
+ 
  
  
  
@@ -7,6 +8,6 @@
  
  Video - https://youtu.be/xPksw9rp3Bw
  
- Accomplishmenmts - README.txt
+ Accomplishments - README.txt
  
  Volcano Game Planning and Scoping.pdf or .docx
