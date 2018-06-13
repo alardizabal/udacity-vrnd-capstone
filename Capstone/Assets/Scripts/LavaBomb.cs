@@ -9,10 +9,9 @@ public class LavaBomb : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Ground"))
-        {
-            Logger.Log("Hit the ground");
-        }
+        Rigidbody bombRigidBody = lavaBomb.GetComponent<Rigidbody>();
+        bombRigidBody.velocity = Vector3.zero;
+        bombRigidBody.angularVelocity = Vector3.zero;
         lavaBomb.SetActive(false);
     }
 }
