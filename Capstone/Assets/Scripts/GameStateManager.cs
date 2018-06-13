@@ -6,7 +6,8 @@ public class GameStateManager : MonoBehaviour
 {
 
     public GameObject birds;
-    public LaunchLavaBomb launcher;
+    public LaunchLavaBomb firstLauncher;
+    public LaunchLavaBomb secondLauncher;
     public AudioSource introAudio;
     public AudioSource youWinAudio;
     public AudioSource youLostAudio;
@@ -54,14 +55,16 @@ public class GameStateManager : MonoBehaviour
     private void StartPlaying()
     {
         SunRotate.shouldRotate = true;
-        launcher.StartLavaBombLauncher();
+        firstLauncher.StartLavaBombLauncher();
+        secondLauncher.StartLavaBombLauncher();
     }
 
     public void PlayerWon()
     {
         Logger.Log("Player Won");
         birds.SetActive(true);
-        launcher.StopLavaBombLauncher();
+        firstLauncher.StopLavaBombLauncher();
+        secondLauncher.StopLavaBombLauncher();
         SunRotate.shouldRotate = false;
         youWinAudio.Play();
     }
@@ -69,7 +72,8 @@ public class GameStateManager : MonoBehaviour
     public void PlayerLost()
     {
         Logger.Log("Player Lost");
-        launcher.StopLavaBombLauncher();
+        firstLauncher.StopLavaBombLauncher();
+        secondLauncher.StopLavaBombLauncher();
         SunRotate.shouldRotate = false;
         didLose = true;
     }
