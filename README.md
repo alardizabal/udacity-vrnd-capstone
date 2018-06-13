@@ -1,8 +1,9 @@
 # Volcano VR
- ## Udacity VR Developer Nanodegree Term 3 - Capstone
+ Udacity VR Developer Nanodegree Term 3 - Capstone
  
  
  
+ ## Highlights
  
  Run 'build.exe' - Tested on an HTC Vive
  
