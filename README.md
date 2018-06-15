@@ -26,14 +26,17 @@
  *You'll find more details in the Planning and Scoping document*
 
  <br>
+
  ## Achievements
+
  **Fundamentals** - 500
  ======================
+
  <br>
 
  1. **Scale (+100)**
 
-   The volcanoes appear large and overbearing compared to the player. The mountains, hills, and pyramids make the player feel small. I wanted to achieve a David vs. Goliath effect as the player tries to outmaneuver the lava bombs.
+ ... The volcanoes appear large and overbearing compared to the player. The mountains, hills, and pyramids make the player feel small. I wanted to achieve a David vs. Goliath effect as the player tries to outmaneuver the lava bombs.
 
  2. **Animation (+100)**
 
