@@ -111,7 +111,7 @@
  **User Testing (+500) - 2x points for having 750 points from Completeness**
 
 
-   1. **Wife**
+ 1. **Wife**
 
      Thought the original gameplay with one volcano was too easy. Suggested that I reduce the game area a bit to give the player less space to avoid the lava bombs.
 
@@ -125,7 +125,7 @@
 
      *Resolution:* I reduced the volume on the spatial sounds emanating from the volcanoes and pyramid, but kept the volume on the lava bombs flying through the air so that the player would have an idea where the lava bombs were coming from.
 
-   2. **Daughter**
+ 2. **Daughter**
 
      Add more levels and make them progressively harder (more lava bombs, decreased gameplay area).
 
