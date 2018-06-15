@@ -11,7 +11,8 @@
  
  Run `build.exe` in the `Capstone` folder
  
- [Walkthrough Video](https://youtu.be/xPksw9rp3Bw)
+ [Achievements Video](https://youtu.be/uAd8XMtGPoY)
+ [Gameplay Video](https://youtu.be/EaWhxSucOhU)
 
  In root folder:
 
